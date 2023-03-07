@@ -29,8 +29,13 @@ clean :
 lint :
 	bash utils/lint.sh
 
+.PHONY : lint_pwsh
+lint_pwsh :
+	@echo "Run PowerShell ScriptAnalyzer"
+	@pwsh -Command "& {Invoke-ScriptAnalyzer ./Invoke-UpdateCargoPackage.ps1}"
+
 .PHONY : test
-test : lint
+test : lint lint_pwsh
 
 .PHONY : format
 format :
