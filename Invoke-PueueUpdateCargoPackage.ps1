@@ -4,3 +4,5 @@ function Invoke-PueueUpdateCargoPackage() {
         pueue add -- "cargo install $i"
     }
 }
+
+Set-Alias -Name pueue_update_cargo_package -Value Invoke-PueueUpdateCargoPackage

@@ -4,3 +4,5 @@ function Invoke-UpdateCargoPackage() {
         cargo install $i
     }
 }
+
+Set-Alias -Name update_cargo_package -Value Invoke-UpdateCargoPackage
